@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Guesser</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .game-container { max-width: 400px; margin: 0 auto; }
+        .thermometer { height: 200px; width: 50px; background: #eee; margin: 20px auto; }
+        .mercury { height: 0%; background: red; transition: height 0.3s; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>🔢 Number Guesser</h1>
+        <div class="thermometer">
+            <div class="mercury"></div>
+        </div>
+        <p>Attempts: <span id="attempts">0</span>/10</p>
+        <p>Score: <span id="score">1000</span></p>
+        <input type="number" id="guess" min="1" max="100" placeholder="Enter guess">
+        <button onclick="submitGuess()">Submit</button>
+        <p id="hint"></p>
+    </div>
+
+    <script>
+        let targetNumber = null;
+        let attempts = 0;
+        let score = 1000;
+        
+        Telegram.WebApp.ready();
+        Telegram.WebApp.expand();
+        
+        function initGame() {
+            targetNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            score = 1000;
+            updateDisplay();
+        }
+
+        function submitGuess() {
+            const guess = parseInt(document.getElementById('guess').value);
+            if (!guess || guess < 1 || guess > 100) return;
+            
+            attempts++;
+            score = Math.max(0, score - 100);
+            
+            if (guess === targetNumber) {
+                endGame(true);
+            } else if (attempts >= 10) {
+                endGame(false);
+            } else {
+                updateDisplay();
+                showHint(guess);
+            }
+        }
+
+        function updateDisplay() {
+            document.getElementById('attempts').textContent = attempts;
+            document.getElementById('score').textContent = score;
+            document.querySelector('.mercury').style.height = `${(attempts/10)*100}%`;
+        }
+
+        function showHint(guess) {
+            const hint = guess > targetNumber ? "⬇️ Go lower!" : "⬆️ Go higher!";
+            document.getElementById('hint').textContent = hint;
+        }
+
+        function endGame(won) {
+            const result = won ? `🎉 Correct! The number was ${targetNumber}` : 
+                               `❌ Game Over! The number was ${targetNumber}`;
+            
+            Telegram.WebApp.sendData(JSON.stringify({
+                result: result,
+                score: score,
+                attempts: attempts
+            }));
+            
+            Telegram.WebApp.close();
+        }
+
+        // Start new game when web app opens
+        initGame();
+    </script>
+</body>
+</html>

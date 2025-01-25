@@ -1,0 +1,235 @@
+CEFR_CURRICULUM = {
+    "A1 Beginner": {
+        "modules": [
+            {
+                "title": "Basic Communication Skills",
+                "lessons": [
+                    {
+                        "topic": "Greetings & Introductions",
+                        "objectives": [
+                            "Exchange basic personal information",
+                            "Use simple social expressions"
+                        ],
+                        "content": [
+                            "📌 Formal vs Informal Greetings:\n"
+                            "- Formal: Good morning/afternoon/evening\n"
+                            "- Informal: Hi/Hello/What's up?\n\n"
+                            "💬 Example Dialog:\n"
+                            "A: Good morning! How are you?\n"
+                            "B: I'm fine, thank you. And you?",
+                            
+                            "📌 Personal Information Exchange:\n"
+                            "- Name: My name is...\n"
+                            "- Nationality: I'm from...\n"
+                            "- Occupation: I'm a student/teacher/etc.\n\n"
+                            "💬 Practice Dialog:\n"
+                            "A: What's your name?\n"
+                            "B: ___ name is Maria. I'm ___ Spain"
+                        ],
+                        "practice": {
+                            "type": "dialogue_completion",
+                            "task": "Complete the conversation:\n"
+                                    "A: Hello! What's your ___?\n"
+                                    "B: My ___ is Tom. ___ are you from?\n"
+                                    "A: I'm ___ Canada.",
+                            "answers": ["name", "name", "Where", "from"]
+                        },
+                        "assessment": {
+                            "task": "Record a 1-minute self-introduction",
+                            "criteria": ["clear pronunciation", "complete information"]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "A2 Elementary": {
+        "modules": [
+            {
+                "title": "Daily Life Communication",
+                "lessons": [
+                    {
+                        "topic": "Shopping & Transactions",
+                        "content": [
+                            "🛒 Clothing Vocabulary:\n"
+                            "- T-shirt, jeans, dress, shoes\n"
+                            "- Sizes: small/medium/large/extra-large\n\n"
+                            "💬 Example Conversation:\n"
+                            "Customer: How much ___ this shirt?\n"
+                            "Shopkeeper: It's €25.99\n"
+                            "Customer: Do you have it ___ medium?",
+                            
+                            "💰 Money Expressions:\n"
+                            "- That's expensive/cheap\n"
+                            "- Do you accept credit cards?\n"
+                            "- Can I get a discount?"
+                        ],
+                        "practice": {
+                            "type": "role_play",
+                            "task": "Create a store dialogue using:\n"
+                                    "- Price inquiry\n"
+                                    "- Size request\n"
+                                    "- Payment method",
+                            "sample_solution": [
+                                "A: How much are these jeans?",
+                                "B: They're €49.99",
+                                "A: Do you have them in size 32?",
+                                "B: Yes, here you are"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "B1 Intermediate": {
+        "modules": [
+            {
+                "title": "Workplace English",
+                "lessons": [
+                    {
+                        "topic": "Job Applications",
+                        "content": [
+                            "📝 CV Writing Essentials:\n"
+                            "- Personal statement format\n"
+                            "- Work experience descriptions\n"
+                            "- Skill section organization\n\n"
+                            "💼 Example CV Section:\n"
+                            "Sales Associate | ABC Retail | 2018-2020\n"
+                            "- Managed daily customer interactions\n"
+                            "- Achieved 150% sales targets",
+                            
+                            "🗣 Interview Techniques:\n"
+                            "- STAR method (Situation, Task, Action, Result)\n"
+                            "- Common questions:\n"
+                            "  'Tell me about yourself'\n"
+                            "  'What are your strengths?'"
+                        ],
+                        "practice": {
+                            "type": "writing_task",
+                            "task": "Write a CV entry for:\n"
+                                    "Position: Customer Service Representative\n"
+                                    "Company: XYZ Corp\n"
+                                    "Duration: 2020-present",
+                            "evaluation_points": [
+                                "Use of action verbs",
+                                "Quantifiable achievements",
+                                "Professional formatting"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "B2 Upper-Intermediate": {
+        "modules": [
+            {
+                "title": "Academic English",
+                "lessons": [
+                    {
+                        "topic": "Research Paper Writing",
+                        "content": [
+                            "📑 Paper Structure:\n"
+                            "1. Abstract (150-250 words)\n"
+                            "2. Introduction (research question)\n"
+                            "3. Methodology\n"
+                            "4. Results\n"
+                            "5. Discussion\n"
+                            "6. Conclusion\n\n"
+                            "🔍 Example Thesis Statement:\n"
+                            "'This study examines the correlation between "
+                            "sleep patterns and academic performance in "
+                            "university students.'",
+                            
+                            "📚 Citation Styles:\n"
+                            "- APA: (Smith, 2020)\n"
+                            "- MLA: (Smith 45)\n"
+                            "- Chicago: (Smith 2020, 45)"
+                        ],
+                        "practice": {
+                            "type": "paraphrasing",
+                            "original": "Global warming is causing polar ice caps to melt rapidly.",
+                            "acceptable_answers": [
+                                "Climate change is leading to accelerated polar ice melt.",
+                                "The rapid melting of polar ice is a result of global warming."
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "C1 Advanced": {
+        "modules": [
+            {
+                "title": "Professional Communication",
+                "lessons": [
+                    {
+                        "topic": "Business Negotiations",
+                        "content": [
+                            "💼 Negotiation Strategies:\n"
+                            "- BATNA (Best Alternative to Negotiated Agreement)\n"
+                            "- Anchoring technique\n"
+                            "- Win-win solutions\n\n"
+                            "💬 Example Phrasing:\n"
+                            "'Perhaps we could explore a middle ground...'\n"
+                            "'What if we considered...?'",
+                            
+                            "📈 Financial Terminology:\n"
+                            "- ROI (Return on Investment)\n"
+                            "- EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization)\n"
+                            "- Liquidity ratios"
+                        ],
+                        "practice": {
+                            "type": "case_study",
+                            "scenario": "Negotiate a 15% price reduction with a supplier "
+                                      "while maintaining quality standards",
+                            "evaluation_matrix": [
+                                "Use of persuasive language",
+                                "Understanding of negotiation principles",
+                                "Cultural sensitivity"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "C2 Proficiency": {
+        "modules": [
+            {
+                "title": "Mastery of English",
+                "lessons": [
+                    {
+                        "topic": "Literary Analysis",
+                        "content": [
+                            "📖 Stylistic Devices:\n"
+                            "- Metaphor: 'Time is a thief'\n"
+                            "- Simile: 'Brave as a lion'\n"
+                            "- Alliteration: 'Peter Piper picked...'\n\n"
+                            "🎭 Example from Shakespeare:\n"
+                            "'All the world's a stage, And all the men and women merely players' "
+                            "(As You Like It, Act II, Scene VII)",
+                            
+                            "📜 Critical Analysis Framework:\n"
+                            "1. Historical context\n"
+                            "2. Thematic exploration\n"
+                            "3. Character development\n"
+                            "4. Language analysis"
+                        ],
+                        "practice": {
+                            "type": "essay_writing",
+                            "prompt": "Analyze the use of irony in Jane Austen's 'Pride and Prejudice'",
+                            "evaluation_criteria": [
+                                "Depth of analysis",
+                                "Use of textual evidence",
+                                "Academic register"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
